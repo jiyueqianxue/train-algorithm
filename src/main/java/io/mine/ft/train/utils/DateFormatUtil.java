@@ -5,9 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * 日期处理工具类
@@ -15,8 +13,6 @@ import org.springframework.util.StringUtils;
  */
 
 public class DateFormatUtil {
-
-	private static final Logger logger = LoggerFactory.getLogger(DateFormatUtil.class);
 
 	/** 默认时间格式：yyyy-MM-dd */
 	public static final String DEFAULT_DATE_FOMART = "yyyy-MM-dd";
@@ -159,7 +155,7 @@ public class DateFormatUtil {
 		try {
 			return new SimpleDateFormat(formatStr).parse(datetimeStr).getTime();
 		} catch (ParseException e) {
-			logger.error("DateFormatUtil formatStrToLong error: ", e);
+			System.out.println("DateFormatUtil formatStrToLong error: ");
 		}
 		return 0;
 	}
