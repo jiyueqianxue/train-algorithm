@@ -38,7 +38,6 @@ public class Josephus
         //图2.2
         String values[]={"A","B","C","D","E"};
         SeqList<String> lista = new SeqList<String>(values);
- 
         //【例2.1】求解Josephus环问题。
         new Josephus(5,0,2);
     }

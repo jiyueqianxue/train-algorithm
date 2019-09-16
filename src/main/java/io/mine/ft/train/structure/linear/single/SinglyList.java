@@ -207,7 +207,9 @@ public class SinglyList<T> extends Object implements java.lang.Iterable<T>  //10
         if (!(obj instanceof SinglyList<?>))
             return false;
         Node<T> p=this.head.next;
-        Node<T> q=((SinglyList<T>)obj).head.next;
+        
+        @SuppressWarnings("unchecked")
+		Node<T> q=((SinglyList<T>)obj).head.next;
         while (p!=null && q!=null && p.data.equals(q.data))
         {
             p=p.next;

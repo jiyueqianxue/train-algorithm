@@ -13,7 +13,7 @@ public class SeqList<T> extends Object  implements java.lang.Iterable<T>  //10.2
 //public class SeqList<T>  extends MyAbstractList<T> //顺序表类，继承抽象列表类。提供迭代器对象
 {
     protected Object[] element;                            //对象数组，保护成员
-    protected int n;                                       //顺序表元素个数（长度）
+    public int n;                                       //顺序表元素个数（长度）
 
     //1. 构造、存取
     public SeqList(int length)                             //构造容量为length的空表
