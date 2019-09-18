@@ -1,10 +1,10 @@
 package io.mine.ft.train.structure.graph;
 
+import io.mine.ft.train.structure.linear.queue.LinkedQueue;
 import io.mine.ft.train.structure.linear.sequence.SeqList;
 import io.mine.ft.train.structure.linear.single.SinglyList;
 import io.mine.ft.train.structure.linked_matrix.Triple;
 import io.mine.ft.train.structure.matrix.Matrix;
-import io.mine.ft.train.structure.tree.two_fork.LinkedQueue;
 
 //《数据结构（Java版）（第4版）》，作者：叶核亚，2014年8月1日
 //7.2  图的表示和实现

@@ -5,6 +5,9 @@
 //【思考题6-2】 基于遍历的操作
 //【例6.1】  二叉树的构造、遍历及插入。
 
+import io.mine.ft.train.structure.linear.queue.SeqQueue;
+import io.mine.ft.train.structure.linear.stack.LinkedStack;
+
 public class BinaryTree<T>                       //二叉树类，二叉链表存储，T指定结点的元素类型 
 {
     public  BinaryNode<T> root;                  //根结点，二叉链表结点结构

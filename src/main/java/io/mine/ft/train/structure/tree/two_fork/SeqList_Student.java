@@ -5,6 +5,7 @@ package io.mine.ft.train.structure.tree.two_fork;
 //【例2.4】  对象信息的分类统计、查找和排序操作。
 
 import io.mine.ft.train.structure.linear.sequence.SeqList;
+import io.mine.ft.train.structure.linear.sort_list.SortedSeqList;
 
 public class SeqList_Student
 {

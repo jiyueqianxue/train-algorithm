@@ -1,6 +1,6 @@
 package io.mine.ft.train.structure.tree.sort_tree;
 
-import io.mine.ft.train.structure.tree.two_fork.LinkedQueue;
+import io.mine.ft.train.structure.linear.queue.LinkedQueue;
 
 //《数据结构（Java版）（第4版）》，作者：叶核亚，2015年3月21日
 //8.5.1   二叉排序树
