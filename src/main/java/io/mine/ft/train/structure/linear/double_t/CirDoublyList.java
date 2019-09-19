@@ -23,21 +23,22 @@ public class CirDoublyList<T>
     //对序号i采取容错措施，若i<0，插入x在最前；若i>n，插入x在最后。O(n)
     public DoubleNode<T> insert(int i, T x)
     {
-        if (x==null)
-            throw new NullPointerException("x==null");     //抛出空对象异常
+        if (x == null)
+            throw new NullPointerException("x == null");     //抛出空对象异常
         DoubleNode<T> front = this.head;      
-        for (int j=0; front.next != this.head && j<i; j++)   //寻找第i-1个结点或最后一个（front指向）
+        for (int j = 0; front.next != this.head && j < i; j++)   //寻找第i-1个结点或最后一个（front指向）
             front = front.next; 
         //以下在front之后插入x结点，包括头插入（i≤0）、中间/尾插入（i>0）
-        DoubleNode<T> q=new DoubleNode<T>(x, front, front.next);
+        DoubleNode<T> q = new DoubleNode<T>(x, front, front.next);
         front.next.prev = q;
         front.next = q;
         return q;                                          //返回插入结点
     }
+    
     public DoubleNode<T> insert(T x)             //尾插入x元素，返回x结点。算法在头结点之前插入，O(1)
     {
-        if (x==null)
-            throw new NullPointerException("x==null");     //抛出空对象异常
+        if (x == null)
+            throw new NullPointerException("x == null");     //抛出空对象异常
         DoubleNode<T> q = new DoubleNode<T>(x, head.prev, head); 
         head.prev.next = q;                                //在头结点之前插入，相当于尾插入
         head.prev = q;
@@ -48,8 +49,8 @@ public class CirDoublyList<T>
     public CirDoublyList(T[] values)                       //构造循环双链表，由values数组提供元素，尾插入
     {
         this();                                            //创建空循环双链表，只有头结点
-        DoubleNode<T> rear=this.head;
-        for (int i=0; i<values.length; i++)
+        DoubleNode<T> rear = this.head;
+        for (int i = 0; i < values.length; i++)
         {
             rear.next=new DoubleNode<T>(values[i], rear, this.head);   //尾插入
             rear = rear.next; 
@@ -61,7 +62,7 @@ public class CirDoublyList<T>
     {
         this();                                          	//创建空循环双链表，只有头结点
         DoubleNode<T> rear = this.head;
-        for (DoubleNode<T> p=list.head.next;  p!=list.head;  p=p.next)
+        for (DoubleNode<T> p = list.head.next;  p != list.head;  p = p.next)
         {
         	rear.next = new DoubleNode<T>(p.data, rear, this.head);
             rear = rear.next; 
@@ -116,8 +117,8 @@ public class CirDoublyList<T>
     //返回循环双链表所有元素的描述字符串（元素次序从后向前），O(n)。必需，优先队列用
     public String toPreviousString()
     {
-        String str=this.getClass().getName()+"(";          //返回类名
-        for (DoubleNode<T> p=this.head.prev; p!=this.head;  p=p.prev)
+        String str= this.getClass().getName()+"(";          //返回类名
+        for (DoubleNode<T> p = this.head.prev; p != this.head;  p = p.prev)
         {
             str += p.data.toString();
             if (p.prev!=this.head) 
@@ -169,8 +170,8 @@ public class CirDoublyList<T>
     //算法删除头结点的前驱结点，O(1)。必需，优先队列用
     public T removeLast()
     {
-        DoubleNode<T> p=this.head.prev;                    //p指向头结点的前驱结点，待删除
-        if (p!=head)
+        DoubleNode<T> p = this.head.prev;                    //p指向头结点的前驱结点，待删除
+        if (p != head)
         {
             p.prev.next = this.head;                       //删除p结点，由JVM稍后释放
             this.head.prev = p.prev;
@@ -184,7 +185,7 @@ public class CirDoublyList<T>
     //顺序查找首次出现的与key相等元素，返回结点，若查找不成功返回null。算法同单链表
     public DoubleNode<T> search(T key) 
     {
-        for (DoubleNode<T> p=this.head.next;  p!=this.head;  p=p.next)
+        for (DoubleNode<T> p = this.head.next;  p != this.head;  p = p.next)
             if (key.equals(p.data))
                 return p;
         return null;
@@ -199,7 +200,7 @@ public class CirDoublyList<T>
     public T remove(T key)
     {
         DoubleNode<T> find = search(key);                    //顺序查找，返回结点
-        if (find!=null)
+        if (find != null)
         {
             find.prev.next = find.next;                    //删除find结点自己
             find.next.prev = find.prev;
@@ -233,7 +234,7 @@ public class CirDoublyList<T>
     //以下4个方法提供迭代遍历循环双链表方式
     public DoubleNode<T> first()                           //返回循环双链表第一个结点（非头结点），O(1)
     {
-        return (head.next==head) ? null : head.next;
+        return (head.next == head) ? null : head.next;
     }
     public DoubleNode<T> next(DoubleNode<T> p)             //返回p的后继结点，O(1)
     {

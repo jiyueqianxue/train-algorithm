@@ -9,9 +9,13 @@ public class CirDoublyListTest {
 		
 		cirDoublyList.insert(100);
 		cirDoublyList.insert(200);
+		cirDoublyList.insert(300);
+		
 		System.out.println(cirDoublyList);
 		
-		//cirDoublyList.insertDifferent(x);
-		//JsonUtil.toJson(cirDoublyList);
+//		cirDoublyList.insert(2, 250);
+//		Integer a1 = cirDoublyList.get(0);
+//		DoubleNode<Integer> first = cirDoublyList.first();
+//		System.out.println(a1);
 	}
 }
