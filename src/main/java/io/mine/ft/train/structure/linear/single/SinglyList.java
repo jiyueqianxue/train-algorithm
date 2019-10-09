@@ -87,7 +87,7 @@ public class SinglyList<T> extends Object implements java.lang.Iterable<T>  //10
     {
         if (x==null)
             throw new NullPointerException("x==null");     //抛出空对象异常
-        Node<T> front=this.head;                           //front指向头结点
+        Node<T> front = this.head;                           //front指向头结点
         for (int j = 0;  front.next != null && j < i;  j++)      //寻找第i-1个或最后一个结点（front指向）
             front = front.next;
         front.next = new Node<T>(x, front.next);           //在front之后插入值为x结点，包括头插入、中间/尾插入
@@ -251,11 +251,11 @@ public class SinglyList<T> extends Object implements java.lang.Iterable<T>  //10
     //在this单链表之后连接list单链表，首尾相接合并成一条单链表；设置list为空单链表，O(n)
     public void concat(SinglyList<T> list)
     {
-        Node<T> rear=this.head;
-        while (rear.next!=null)                            //寻找this单链表的最后一个结点作为插入位置
+        Node<T> rear = this.head;
+        while (rear.next != null)                            //寻找this单链表的最后一个结点作为插入位置
             rear = rear.next;
         rear.next = list.head.next;                        //将list链接在this单链表之后，合并两条单链表成一条单链表
-        list.head.next=null;                               //设置list为空单链表，否则逻辑错。对引用形式参数的任何修改均作用于实际参数
+        list.head.next = null;                               //设置list为空单链表，否则逻辑错。对引用形式参数的任何修改均作用于实际参数
     }
 
     public void addAll(SinglyList<T> list)                 //复制list所有结点插入到this单链表之后，集合并，不改变list。

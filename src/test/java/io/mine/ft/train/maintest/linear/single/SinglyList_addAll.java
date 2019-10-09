@@ -1,4 +1,6 @@
-package io.mine.ft.train.structure.linear.single;
+package io.mine.ft.train.maintest.linear.single;
+
+import io.mine.ft.train.structure.linear.single.SinglyList;
 
 //《数据结构（Java版）（第4版）习题解答与实验指导》，作者：叶核亚，2014年12月31日，JDK 8.25
 //§2.3 线性表的链式存储和实现

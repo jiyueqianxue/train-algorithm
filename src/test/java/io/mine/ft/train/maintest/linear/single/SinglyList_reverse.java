@@ -1,8 +1,11 @@
-package io.mine.ft.train.structure.linear.single;
+package io.mine.ft.train.maintest.linear.single;
 //《数据结构（Java版）（第4版）》，作者：叶核亚，2014年9月12日
 //§2.3 线性表的链式存储和实现
 //3. 带头结点的单链表类
 //【例2.5】单链表逆转。
+
+import io.mine.ft.train.structure.linear.single.Node;
+import io.mine.ft.train.structure.linear.single.SinglyList;
 
 public class SinglyList_reverse 
 {

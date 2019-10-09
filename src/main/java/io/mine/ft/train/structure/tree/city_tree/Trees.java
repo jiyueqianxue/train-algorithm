@@ -28,7 +28,7 @@ public class Trees
           }
           else
           {
-              while (n<p.level-1)              //prelist[i]比p的'\t'少，p向上寻找插入位置
+              while (n < p.level-1)              //prelist[i]比p的'\t'少，p向上寻找插入位置
                   p = p.parent;
               p.sibling = new TreeNode<String>(str, p.level, p.parent, null, null);//同层，插入作为p结点的下个兄弟
               p = p.sibling;
