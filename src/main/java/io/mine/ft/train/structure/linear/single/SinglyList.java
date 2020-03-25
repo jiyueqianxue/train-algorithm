@@ -322,5 +322,12 @@ public class SinglyList<T> extends Object implements java.lang.Iterable<T>  //10
         }
     }//内部类结束
     //【思考题10-2】
+    
+    public static void main(String[] args) {
+    	Integer[] a = {1, 2, 3};
+    	SinglyList<Integer> sl= new SinglyList<>(a);
+    	Integer s = sl.remove(5);
+    	System.out.println(s);
+	}
 }
 //@author：Yeheya。2014-10-30
